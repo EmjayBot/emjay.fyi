@@ -3,25 +3,33 @@ import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'Ima.gs — Emjay',
-  description: 'Fast image tools and experiments.',
+  description: 'Community image host powered by Cloudflare R2.',
 };
 ---
 
 <Layout metadata={metadata}>
   <section class="px-4 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <h1 class="text-4xl md:text-5xl font-bold mb-6">Ima.gs</h1>
-    <p class="text-xl text-muted mb-8">Lightweight image utilities — resize, convert, optimize. Built for speed.</p>
+    <p class="text-xl text-muted mb-8">A fast, no-nonsense image host for communities — built on Cloudflare R2.</p>
 
     <div class="prose prose-lg dark:prose-invert max-w-none">
-      <h2>What it does</h2>
+      <h2>The plan</h2>
+      <p>
+        Ima.gs was designed as an alternative to ad-heavy hosts: direct links, privacy-respecting, and cheap to run at
+        scale thanks to R2 storage.
+      </p>
       <ul>
-        <li>Drag-and-drop image compression</li>
-        <li>Format conversion (WebP, AVIF, PNG, JPG)</li>
-        <li>Batch processing</li>
+        <li>Drag-and-drop uploads, instant CDN links</li>
+        <li>Original quality preserved, optional auto-WebP</li>
+        <li>API for bots and community tools</li>
+        <li>No accounts required for basic use</li>
       </ul>
 
       <h2>Status</h2>
-      <p>In development. Early access coming soon.</p>
+      <p>
+        Prototype built, R2 bucket wired up. Paused while I focus on Anoatech core. Code will be open-sourced when the
+        auth layer is clean.
+      </p>
     </div>
   </section>
 </Layout>

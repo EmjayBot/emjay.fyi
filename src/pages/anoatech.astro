@@ -3,22 +3,37 @@ import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'Anoatech — Emjay',
-  description: 'Tech experiments and prototypes.',
+  description: 'The platform for building and hosting your own Kainoa.',
 };
 ---
 
 <Layout metadata={metadata}>
   <section class="px-4 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <h1 class="text-4xl md:text-5xl font-bold mb-6">Anoatech</h1>
-    <p class="text-xl text-muted mb-8">R&D lab for weird ideas — AI tools, automation, and prototypes.</p>
+    <p class="text-xl text-muted mb-8">The foundation I want to build everything on — and let you build on too.</p>
 
     <div class="prose prose-lg dark:prose-invert max-w-none">
-      <h2>Current Experiments</h2>
+      <h2>Vision</h2>
+      <p>
+        Anoatech is a self-hostable platform for AI assistants, search, and community tools. Think: the engine behind
+        Kainoa, packaged so anyone can run their own version.
+      </p>
+
+      <h2>What it provides</h2>
       <ul>
-        <li>AI-assisted writing workflows</li>
-        <li>Browser automation tools</li>
-        <li>Data visualization sketches</li>
+        <li>Docs and templates to deploy your own Kainoa</li>
+        <li>Pluggable vector search (Wayfinder core)</li>
+        <li>Auth, functions, and storage abstractions</li>
+        <li>Built for Cloudflare-first, but portable</li>
       </ul>
+
+      <h2>Roadmap</h2>
+      <p>
+        v0 — internal use for Tep Worlds. v1 — public docs, one-click deploy, and example datasets. Goal: let
+        communities own their AI, not rent it.
+      </p>
+
+      <p><a href="https://github.com/EmjayBot" class="text-primary hover:underline">Follow progress on GitHub →</a></p>
     </div>
   </section>
 </Layout>
