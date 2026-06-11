@@ -11,23 +11,27 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- HERO -->
   <Hero
-    actions={[
-      { variant: 'primary', text: 'View Portfolio', href: '#portfolio' },
-      { text: 'About', href: '/about' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Emjay worldbuilding' }}
-  >
-    <Fragment slot="title">
-      Hi! I'm <span class="text-accent dark:text-white highlight">Emjay</span>!
-    </Fragment>
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Explore Worldbuilding',
+      href: '/worldbuilding',
+      icon: 'tabler:map',
+    },
+    { text: 'View on GitHub', href: 'https://github.com/EmjayBot' },
+  ]}
+>
+  <Fragment slot="title">
+    Building <span class="text-accent dark:text-white highlight">Urth</span> and the tools to explore it
+  </Fragment>
 
-    <Fragment slot="subtitle">
-      I world-build and conlang. I create languages, cultures, maps, and stories — and build the tools to support them.
-    </Fragment>
-  </Hero>
-
+  <Fragment slot="subtitle">
+    I'm Emjay — creator of the <strong>Free Pax States</strong> and the <strong>Kilumi</strong> conlang. 
+    Currently building <strong>Anoatech</strong>, the platform behind <strong>Kainoa AI</strong> and <strong>Wayfinder</strong> search for Tep Worlds, 
+    plus <strong>Ima.gs</strong>, a community image host on Cloudflare R2.
+  </Fragment>
+</Hero>
   <!-- PORTFOLIO -->
   <Features2
     id="portfolio"
