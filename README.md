@@ -20,3 +20,4 @@ git clone https://github.com/EmjayBot/emjay.fyi.git
 cd emjay.fyi
 npm install
 npm run dev
+```
