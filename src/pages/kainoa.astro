@@ -1,0 +1,26 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Kainoa Apps — Emjay',
+  description: 'Small, useful apps for everyday workflows.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Kainoa Apps</h1>
+    <p class="text-xl text-muted mb-8">
+      A collection of small apps focused on doing one thing well.
+    </p>
+    
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <h2>Apps</h2>
+      <ul>
+        <li><strong>Task Tamer</strong> — minimal daily planner</li>
+        <li><strong>Clip Cache</strong> — clipboard history that respects privacy</li>
+        <li><strong>Focus Timer</strong> — distraction-free pomodoro</li>
+      </ul>
+    </div>
+  </section>
+</Layout>

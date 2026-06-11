@@ -1,0 +1,29 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Worldbuilding — Emjay',
+  description: 'Original worlds, maps, and stories.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Worldbuilding</h1>
+    <p class="text-xl text-muted mb-8">
+      Original worlds, cultures, maps, and short fiction. A playground for ideas that don't fit anywhere else.
+    </p>
+    
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <h2>Current Projects</h2>
+      <ul>
+        <li><strong>Atlas Project</strong> — interactive maps and lore</li>
+        <li><strong>Short Stories</strong> — bite-size fiction from different worlds</li>
+        <li><strong>Conlangs</strong> — language sketches and naming systems</li>
+      </ul>
+      
+      <h2>Links</h2>
+      <p>Coming soon — building out the archive.</p>
+    </div>
+  </section>
+</Layout>
