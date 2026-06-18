@@ -11,16 +11,12 @@ export const headerData = {
       href: getPermalink('/worldbuilding'),
     },
     {
-      text: 'Ima.gs',
-      href: getPermalink('/imags'),
+      text: 'Wayfield Labs',
+      href: getPermalink('/wayfield'),
     },
     {
-      text: 'Kainoa Apps',
-      href: getPermalink('/kainoa'),
-    },
-    {
-      text: 'Anoatech',
-      href: getPermalink('/anoatech'),
+      text: 'Blog',
+      href: getPermalink('/blog'),
     },
   ],
   actions: [{ text: 'GitHub', href: 'https://github.com/EmjayBot', target: '_blank' }],
@@ -29,12 +25,11 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Portfolio',
+      title: 'Projects',
       links: [
         { text: 'Worldbuilding', href: getPermalink('/worldbuilding') },
-        { text: 'Ima.gs', href: getPermalink('/imags') },
-        { text: 'Kainoa Apps', href: getPermalink('/kainoa') },
-        { text: 'Anoatech', href: getPermalink('/anoatech') },
+        { text: 'Wayfield Labs', href: getPermalink('/wayfield') },
+        { text: 'Blog', href: getPermalink('/blog') },
       ],
     },
   ],
