@@ -12,25 +12,26 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Explore Worldbuilding',
-      href: '/worldbuilding',
-      icon: 'tabler:map',
-    },
-    { text: 'Wayfield Labs', href: 'https://wayfield.dev' },
-  ]}
->
-  <Fragment slot="title">
-    Building <span class="text-accent dark:text-white highlight">Urth</span> — one language at a time
-  </Fragment>
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Worldbuilding',
+        href: '/worldbuilding',
+        icon: 'tabler:map',
+      },
+      { text: 'Wayfield Labs', href: 'https://wayfield.dev' },
+    ]}
+  >
+    <Fragment slot="title">
+      Building <span class="text-accent dark:text-white highlight">Urth</span> — one language at a time
+    </Fragment>
 
-  <Fragment slot="subtitle">
-    I'm Emjay — creator of the <strong>Free Pax States</strong> and the <strong>Kilumi</strong> conlang. 
-    I run <strong>Wayfield Labs</strong> for research and tools that support worldbuilding and conlanging.
-  </Fragment>
-</Hero>
+    <Fragment slot="subtitle">
+      I'm Emjay — creator of the <strong>Free Pax States</strong> and the <strong>Kilumi</strong> conlang. I run <strong
+        >Wayfield Labs</strong
+      > for research and tools that support worldbuilding and conlanging.
+    </Fragment>
+  </Hero>
   <!-- PORTFOLIO -->
   <Features2
     id="portfolio"
