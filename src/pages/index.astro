@@ -35,36 +35,33 @@ const metadata = {
   </Fragment>
 </Hero>
   <!-- PORTFOLIO -->
-  <Features2
-    id="portfolio"
-    title="Portfolio"
-    subtitle="Four tracks of work"
-    columns={2}
-    items={[
-      {
-        title: 'Worldbuilding',
-        description: 'My personal worlds, maps, cultures, and conlangs — the creative foundation.',
-        icon: 'tabler:world',
-        callToAction: { text: 'Explore →', href: '/worldbuilding' },
+<Features
+  id="portfolio"
+  title="Current Projects"
+  subtitle="Two tracks: collaborative worldbuilding, and open-source infrastructure."
+  columns={2}
+  items={[
+    {
+      title: 'Urth Worldbuilding',
+      description:
+        'Collaborative worldbuilding project. Home to the Free Pax States and the Kilumi conlang. Active since 2006.',
+      icon: 'tabler:world',
+      callToAction: {
+        text: 'Explore Urth',
+        href: '/worldbuilding',
       },
-      {
-        title: 'Ima.gs',
-        description: 'Image tools, experiments, and lightweight hosting utilities.',
-        icon: 'tabler:photo',
-        callToAction: { text: 'Visit Ima.gs →', href: '/imags' },
+    },
+    {
+      title: 'Wayfield Labs',
+      description:
+        'Git-native software for communities the tech industry ignores. 20 open-source apps across Infra, Communication, Data, and Business. All MIT, offline-capable.',
+      icon: 'tabler:git-branch',
+      callToAction: {
+        text: 'wayfield.dev →',
+        href: 'https://wayfield.dev',
+        target: '_blank',
       },
-      {
-        title: 'Kainoa Apps',
-        description: 'Apps and utilities built under the Kainoa brand for creators and communities.',
-        icon: 'tabler:apps',
-        callToAction: { text: 'See apps →', href: '/kainoa' },
-      },
-      {
-        title: 'Anoatech',
-        description: 'Public documentation and releases for the apps I ship.',
-        icon: 'tabler:book-2',
-        callToAction: { text: 'Read docs →', href: '/anoatech' },
-      },
-    ]}
-  />
+    },
+  ]}
+/>
 </Layout>
