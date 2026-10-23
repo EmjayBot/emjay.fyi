@@ -5,8 +5,9 @@ import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 const metadata = {
-  title: 'Emjay — Open-source tools',
-  description: 'Emjay — open-source tooling (XCF Sync, PowerCordKit). Urth roleplayer, out-of-character only.',
+  title: 'Emjay — Tools, worlds and words',
+  description:
+    'Emjay — Urth roleplayer (Free Pax States, Kilumi conlang) sharing worldbuilding and open-source tooling (XCF Sync, PowerCordKit).',
   ignoreTitleTemplate: true,
 };
 
@@ -23,11 +24,13 @@ const latestPosts = await findLatestPosts({ count: 3 });
     </p>
     <h1 class="font-display text-4xl sm:text-6xl leading-[1.05] mt-4 max-w-3xl">
       Tools for communities,<br />
-      <span class="italic font-medium">maps for worlds.</span>
+      <span class="italic font-medium">worlds and words I construct.</span>
     </h1>
     <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-      I'm Emjay — I roleplay on Urth (Free Pax States, OOC). Canon lives off-site with my
-      human-written notes. Here I share the open-source tooling:
+      I'm Emjay — I roleplay on Urth as
+      <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://github.com/EmjayBot/free-pax-states" target="_blank" rel="noopener">Free Pax States</a>
+      and I'm developing the <strong class="text-default">Kilumi</strong> conlang.
+      Here I share my worldbuilding and the open-source tooling:
       <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://github.com/EmjayBot/xcf-git-sync" target="_blank" rel="noopener">XCF Sync</a>, the tool behind
       <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://atlas.urthmaps.com/" target="_blank" rel="noopener">Urth Atlas</a> — plus
       <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://github.com/EmjayBot/powercordkit" target="_blank" rel="noopener">PowerCordKit</a>,

@@ -11,7 +11,7 @@ metadata:
   title:
     default: Emjay FYI
     template: '%s — Emjay FYI'
-  description: 'Emjay — open-source tooling (XCF Sync for GIMP-to-git maps, PowerCordKit Discord mod tools). Urth roleplayer, OOC only.'
+  description: 'Emjay — Urth roleplayer (Free Pax States, Kilumi conlang) sharing worldbuilding and open-source tooling (XCF Sync, PowerCordKit).'
   robots:
     index: true
     follow: true
