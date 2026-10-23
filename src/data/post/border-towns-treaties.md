@@ -1,6 +1,7 @@
 ---
 title: Border towns and their treaties
 publishDate: 2026-09-20
+draft: true
 excerpt: Mapping the towns holding the Free Pax States together — who trades with whom, and what keeps the peace.
 category: Free Pax States
 tags:

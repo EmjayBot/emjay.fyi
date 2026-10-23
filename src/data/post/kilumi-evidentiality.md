@@ -1,6 +1,7 @@
 ---
 title: Kilumi evidentiality markers
 publishDate: 2026-09-13
+draft: true
 excerpt: How Kilumi traders mark what they saw versus what they heard — clarity built into the grammar.
 category: Kilumi
 tags:

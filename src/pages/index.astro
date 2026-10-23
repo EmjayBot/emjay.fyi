@@ -5,9 +5,8 @@ import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 const metadata = {
-  title: 'Emjay — Worldbuilder & Conlanger',
-  description:
-    'Worldbuilding on Urth (Free Pax States, Kilumi conlang), XCF Sync for GIMP-to-git maps, and PowerCordKit Discord mod tools.',
+  title: 'Emjay — Open-source tools',
+  description: 'Emjay — open-source tooling (XCF Sync, PowerCordKit). Urth roleplayer, out-of-character only.',
   ignoreTitleTemplate: true,
 };
 
@@ -20,15 +19,15 @@ const latestPosts = await findLatestPosts({ count: 3 });
   <!-- HERO / FIELD HEADER -->
   <section class="mx-auto max-w-6xl px-4 sm:px-6 pt-12 pb-8 sm:pt-16">
     <p class="font-mono2 text-[11px] sm:text-xs tracking-[0.2em] uppercase opacity-70">
-      FIELD NOTES FROM URTH
+      EMJAY — PORTFOLIO
     </p>
     <h1 class="font-display text-4xl sm:text-6xl leading-[1.05] mt-4 max-w-3xl">
-      A world of fractured nations,<br />
-      <span class="italic font-medium">living languages, quiet revolutions.</span>
+      Tools for communities,<br />
+      <span class="italic font-medium">maps for worlds.</span>
     </h1>
     <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-      I'm Emjay — I'm building the nation of <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://github.com/EmjayBot/free-pax-states" target="_blank" rel="noopener">Free Pax States</a>
-      and the <strong class="text-default">Kilumi</strong> conlang on Urth. I also envisioned
+      I'm Emjay — I roleplay on Urth (Free Pax States, OOC). Canon lives off-site with my
+      human-written notes. Here I share the open-source tooling:
       <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://github.com/EmjayBot/xcf-git-sync" target="_blank" rel="noopener">XCF Sync</a>, the tool behind
       <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://atlas.urthmaps.com/" target="_blank" rel="noopener">Urth Atlas</a> — plus
       <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://github.com/EmjayBot/powercordkit" target="_blank" rel="noopener">PowerCordKit</a>,
@@ -39,7 +38,7 @@ const latestPosts = await findLatestPosts({ count: 3 });
         href="/worldbuilding"
         class="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-[#F7F3EA] hover:bg-neutral-700 dark:bg-[#E8DCC4] dark:text-neutral-900 dark:hover:bg-white transition"
       >
-        <span aria-hidden="true">◈</span> Explore Free Pax States
+        <span aria-hidden="true">◈</span> Urth roleplay (OOC)
       </a>
       <a
         href="/xcf-sync"
@@ -55,8 +54,7 @@ const latestPosts = await findLatestPosts({ count: 3 });
       </a>
     </div>
     <div class="font-mono2 mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[11px] tracking-widest uppercase opacity-60 border-t emjay-rule pt-4">
-      <span>free pax states</span>
-      <span>lexicon 205 words</span>
+      <span>urth roleplay (ooc)</span>
       <span>xcf-git-sync on PyPI</span>
       <span>powercordkit live</span>
       <span>urth atlas live</span>
@@ -69,29 +67,28 @@ const latestPosts = await findLatestPosts({ count: 3 });
     <a href="/worldbuilding" class="emjay-card group rounded-2xl p-7 sm:p-8 block hover:-translate-y-0.5 transition-transform">
       <div class="flex items-center justify-between">
         <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
-          ▚ Worldbuilding — Urth
+          ▚ Urth roleplay — OOC
         </p>
-        <p class="font-mono2 text-[11px] opacity-50">FPS // 03 FILES</p>
+        <p class="font-mono2 text-[11px] opacity-50">OFF-SITE CANON</p>
       </div>
-      <h2 class="font-display text-3xl mt-4">Free Pax States & Kilumi</h2>
+      <h2 class="font-display text-3xl mt-4">Free Pax States</h2>
       <p class="mt-3 text-muted leading-relaxed">
-        A loose confederation after the Pax collapse — city-states, trade routes, mutual-defense
-        pacts. Plus <span class="font-mono2 text-sm">kilu-mi</span>
-        <span class="opacity-60 text-sm">[trade.tongue]</span>, the agglutinative trade tongue of the southern archipelagos.
+        I roleplay on Urth. To respect Urth's strict no-AI writing rule, no lore, language data,
+        or stories are published here — canon lives off-site in my human-written notes.
       </p>
       <ul class="mt-5 space-y-2 text-sm">
         <li class="border-t emjay-rule pt-2 flex justify-between gap-4">
-          <span>Council of envoys, no standing army</span><span class="font-mono2 text-xs opacity-50">POL</span>
+          <span>Canon lives off-site, human-written only</span><span class="font-mono2 text-xs opacity-50">OOC</span>
         </li>
         <li class="border-t emjay-rule pt-2 flex justify-between gap-4">
-          <span>SOV · case stacking · evidentiality</span><span class="font-mono2 text-xs opacity-50">KIL</span>
+          <span>No lexicon, grammar, or treaty text here</span><span class="font-mono2 text-xs opacity-50">OOC</span>
         </li>
         <li class="border-t border-b emjay-rule py-2 flex justify-between gap-4">
-          <span>Border towns & treaties — mapping now</span><span class="font-mono2 text-xs opacity-50">MAP</span>
+          <span>Tooling that supports the maps, below</span><span class="font-mono2 text-xs opacity-50">TOOLS</span>
         </li>
       </ul>
       <p class="mt-5 text-sm font-semibold group-hover:underline underline-offset-4">
-        Open the field file →
+        Open the OOC note →
       </p>
     </a>
 
@@ -148,9 +145,14 @@ const latestPosts = await findLatestPosts({ count: 3 });
 
   <!-- FIELD LOG -->  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
     <div class="flex items-end justify-between border-b emjay-rule pb-3">
-      <h3 class="font-mono2 text-xs tracking-[0.2em] uppercase opacity-70">Latest from the field</h3>
+      <h3 class="font-mono2 text-xs tracking-[0.2em] uppercase opacity-70">Log</h3>
       <a href="/blog" class="text-sm font-semibold hover:underline underline-offset-4">All entries →</a>
     </div>
+    {latestPosts.length === 0 ? (
+      <p class="text-sm text-muted mt-4">
+        No public notes right now — Urth lore stays off-site (human-written only). Tool updates ship with releases on GitHub.
+      </p>
+    ) : (
     <div class="grid sm:grid-cols-3 gap-4 mt-4">
       {
         latestPosts.map((post) => (
@@ -168,8 +170,9 @@ const latestPosts = await findLatestPosts({ count: 3 });
         ))
       }
     </div>
+    )}
     <p class="font-mono2 text-[11px] tracking-widest uppercase opacity-50 mt-8 text-center">
-      Lore CC-BY · Code MIT · No trackers · RSS inside
+      Code MIT · No trackers · RSS inside
     </p>
   </section>
 </Layout>

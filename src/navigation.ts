@@ -43,5 +43,5 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/EmjayBot' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
-  footNote: `© ${new Date().getFullYear()} Emjay · Lore CC-BY · Code MIT · <a class="underline underline-offset-2" href="/rss.xml">RSS</a>`,
+  footNote: `© ${new Date().getFullYear()} Emjay · Code MIT · <a class="underline underline-offset-2" href="/rss.xml">RSS</a>`,
 };
