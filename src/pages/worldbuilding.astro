@@ -2,8 +2,9 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Urth roleplay (OOC)',
-  description: 'Emjay roleplays on Urth. Canon is human-written and lives off-site — this page is out-of-character only.',
+  title: 'Worldbuilding on Urth',
+  description:
+    'Emjay roleplays on Urth — canon lives on TEPwiki and the FPS showcase portal. This page is out-of-character links only, no lore text.',
 };
 ---
 
@@ -12,55 +13,117 @@ const metadata = {
 
   <section class="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-16">
     <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase opacity-60">URTH // OUT OF CHARACTER</p>
-    <h1 class="font-display text-4xl sm:text-5xl mt-3">Urth roleplay</h1>
+    <h1 class="font-display text-4xl sm:text-5xl mt-3">Worldbuilding</h1>
     <p class="text-xl text-muted mt-4 leading-relaxed">
-      I roleplay on Urth as the Free Pax States. Urth has a strict no-AI writing rule, so no lore,
-      language data, treaties, or stories are published on this site.
+      I roleplay on Urth as the Free Pax States. Urth has a strict no-AI writing rule, so all
+      canon below is human-written and lives off-site — this page is links only.
     </p>
 
-    <div class="emjay-card rounded-2xl p-7 sm:p-8 mt-8">
-      <div class="flex items-center justify-between">
-        <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
-          ▚ OOC note
+    <div class="mt-8 grid gap-4">
+      <a
+        href="https://emjaybot.github.io/free-pax-states/"
+        target="_blank"
+        rel="noopener"
+        class="emjay-card group rounded-2xl p-7 sm:p-8 block hover:-translate-y-0.5 transition-transform"
+      >
+        <div class="flex items-center justify-between">
+          <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
+            ▚ Free Pax States — showcase portal
+          </p>
+          <p class="font-mono2 text-[11px] opacity-50">PORTAL ↗</p>
+        </div>
+        <p class="mt-3 leading-relaxed text-muted">
+          Factbook at a glance, states & territories, and destinations — synced from the Census
+          Office sheet and TEPwiki.
         </p>
-        <p class="font-mono2 text-[11px] opacity-50">HUMAN-WRITTEN CANON ONLY</p>
-      </div>
-      <ul class="mt-5 text-[15px] space-y-0 border-t emjay-rule">
-        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
-          <span>Canon lives off-site in my own human-written notes</span>
-          <span class="font-mono2 text-xs opacity-50 shrink-0">OOC</span>
-        </li>
-        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
-          <span>Nothing here is in-character or citable for RP</span>
-          <span class="font-mono2 text-xs opacity-50 shrink-0">OOC</span>
-        </li>
-        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
-          <span>Maps + tooling below are the only public artifacts</span>
-          <span class="font-mono2 text-xs opacity-50 shrink-0">TOOLS</span>
-        </li>
-      </ul>
-      <p class="mt-5 text-sm text-muted">
-        Code-side mirror (tooling configs only, no lore):
-        <a
-          class="font-semibold text-default hover:underline underline-offset-4"
-          href="https://github.com/EmjayBot/free-pax-states"
-          target="_blank"
-          rel="noopener">Free Pax States on GitHub →</a
-        >
-      </p>
-    </div>
+        <p class="mt-4 text-sm font-semibold group-hover:underline underline-offset-4">
+          Open the portal →
+        </p>
+      </a>
 
-    <div class="emjay-card rounded-2xl p-7 sm:p-8 mt-4">
-      <div class="flex items-center justify-between">
-        <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
-          ◐ Conlang — off-site
+      <a
+        href="https://emjaybot.github.io/free-pax-states/census/"
+        target="_blank"
+        rel="noopener"
+        class="emjay-card group rounded-2xl p-7 sm:p-8 block hover:-translate-y-0.5 transition-transform"
+      >
+        <div class="flex items-center justify-between">
+          <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
+            ▚ Census & Data Office — economic data
+          </p>
+          <p class="font-mono2 text-[11px] opacity-50">POP + GDP ↗</p>
+        </div>
+        <p class="mt-3 leading-relaxed text-muted">
+          Population and GDP (nominal + PPP) per state and territory, live from the FPS Census
+          Office sheet.
         </p>
-        <p class="font-mono2 text-[11px] opacity-50">NO DATA PUBLISHED</p>
-      </div>
-      <p class="mt-4 leading-relaxed text-muted">
-        I'm developing a conlang for Urth. To keep it clearly human-written for RP, I'm not
-        publishing lexicon entries, grammar, or examples here.
-      </p>
+        <p class="mt-4 text-sm font-semibold group-hover:underline underline-offset-4">
+          Open the data →
+        </p>
+      </a>
+
+      <a
+        href="https://tep.wiki/wiki/Free_Pax_States"
+        target="_blank"
+        rel="noopener"
+        class="emjay-card group rounded-2xl p-7 sm:p-8 block hover:-translate-y-0.5 transition-transform"
+      >
+        <div class="flex items-center justify-between">
+          <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
+            ▚ Free Pax States on TEPwiki
+          </p>
+          <p class="font-mono2 text-[11px] opacity-50">FACTBOOK ↗</p>
+        </div>
+        <p class="mt-3 leading-relaxed text-muted">
+          The full nation factbook — history, government, economy, culture. Canon reference, on
+          Urth's encyclopedia.
+        </p>
+        <p class="mt-4 text-sm font-semibold group-hover:underline underline-offset-4">
+          Read the factbook →
+        </p>
+      </a>
+
+      <a
+        href="https://tep.wiki/wiki/Urth"
+        target="_blank"
+        rel="noopener"
+        class="emjay-card group rounded-2xl p-7 sm:p-8 block hover:-translate-y-0.5 transition-transform"
+      >
+        <div class="flex items-center justify-between">
+          <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
+            ▚ Urth on TEPwiki
+          </p>
+          <p class="font-mono2 text-[11px] opacity-50">SETTING ↗</p>
+        </div>
+        <p class="mt-3 leading-relaxed text-muted">
+          The shared world itself — continents, oceans, and species. The setting everything above
+          plays in.
+        </p>
+        <p class="mt-4 text-sm font-semibold group-hover:underline underline-offset-4">
+          Read about Urth →
+        </p>
+      </a>
+
+      <a
+        href="https://tep.wiki/wiki/Kilumi"
+        target="_blank"
+        rel="noopener"
+        class="emjay-card group rounded-2xl p-7 sm:p-8 block hover:-translate-y-0.5 transition-transform"
+      >
+        <div class="flex items-center justify-between">
+          <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
+            ◐ Kilumi on TEPwiki
+          </p>
+          <p class="font-mono2 text-[11px] opacity-50">LANGUAGE ↗</p>
+        </div>
+        <p class="mt-3 leading-relaxed text-muted">
+          The conlang's canon reference — classification, dialects, and status. My working notes
+          stay with my human-written drafts.
+        </p>
+        <p class="mt-4 text-sm font-semibold group-hover:underline underline-offset-4">
+          Read about Kilumi →
+        </p>
+      </a>
     </div>
 
     <p class="mt-8 text-sm">
