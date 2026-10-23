@@ -1,63 +1,87 @@
 ---
+// Hybrid system: Field Archive (Urth lore) + Terminal (tooling)
+// Serif display for lore, mono for git-native metadata, Inter for body.
 import '@fontsource-variable/inter';
-
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
 ---
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
 
 <style is:inline>
   :root {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+    --aw-font-serif: 'Fraunces', Georgia, serif;
+    --aw-font-heading: 'Fraunces', Georgia, serif;
+    --aw-font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: rgb(26 24 20);
+    --aw-color-secondary: rgb(68 62 50);
+    --aw-color-accent: rgb(120 72 20);
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    --aw-color-text-heading: rgb(26 24 20);
+    --aw-color-text-default: rgb(38 35 29);
+    --aw-color-text-muted: rgb(38 35 29 / 68%);
+    --aw-color-bg-page: rgb(247 243 234);
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    --aw-color-bg-page-dark: rgb(22 20 17);
+
+    /* hybrid tokens */
+    --emjay-rule: rgb(26 24 20 / 14%);
+    --emjay-card: rgb(255 253 247);
+    --emjay-stamp: rgb(120 72 20);
+    --emjay-terminal: rgb(22 20 17);
+    --emjay-terminal-line: rgb(255 255 255 / 12%);
 
     ::selection {
-      background-color: lavender;
+      background-color: rgb(26 24 20);
+      color: rgb(247 243 234);
     }
   }
 
   .dark {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+    --aw-font-serif: 'Fraunces', Georgia, serif;
+    --aw-font-heading: 'Fraunces', Georgia, serif;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: rgb(232 220 196);
+    --aw-color-secondary: rgb(200 184 152);
+    --aw-color-accent: rgb(216 164 90);
 
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+    --aw-color-text-heading: rgb(243 238 226);
+    --aw-color-text-default: rgb(232 226 210);
+    --aw-color-text-muted: rgb(232 226 210 / 66%);
+    --aw-color-bg-page: rgb(22 20 17);
+
+    --emjay-rule: rgb(255 255 255 / 14%);
+    --emjay-card: rgb(30 27 22);
+    --emjay-stamp: rgb(216 164 90);
 
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: rgb(232 220 196);
+      color: rgb(22 20 17);
     }
+  }
+
+  .font-display {
+    font-family: var(--aw-font-heading);
+    letter-spacing: -0.02em;
+  }
+  .font-mono2 {
+    font-family: var(--aw-font-mono);
+  }
+  .emjay-rule {
+    border-color: var(--emjay-rule);
+  }
+  .emjay-card {
+    background: var(--emjay-card);
+    border: 1px solid var(--emjay-rule);
+  }
+  .emjay-terminal {
+    background: var(--emjay-terminal);
+    border: 1px solid var(--emjay-terminal-line);
   }
 </style>

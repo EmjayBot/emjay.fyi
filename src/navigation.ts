@@ -11,8 +11,12 @@ export const headerData = {
       href: getPermalink('/worldbuilding'),
     },
     {
-      text: 'Wayfield Labs',
-      href: getPermalink('/wayfield'),
+      text: 'XCF Sync',
+      href: getPermalink('/xcf-sync'),
+    },
+    {
+      text: 'PowerCordKit',
+      href: getPermalink('/powercordkit'),
     },
     {
       text: 'Blog',
@@ -28,7 +32,8 @@ export const footerData = {
       title: 'Projects',
       links: [
         { text: 'Worldbuilding', href: getPermalink('/worldbuilding') },
-        { text: 'Wayfield Labs', href: getPermalink('/wayfield') },
+        { text: 'XCF Sync', href: getPermalink('/xcf-sync') },
+        { text: 'PowerCordKit', href: getPermalink('/powercordkit') },
         { text: 'Blog', href: getPermalink('/blog') },
       ],
     },
@@ -38,5 +43,5 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/EmjayBot' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
-  footNote: `© ${new Date().getFullYear()} Emjay · Built with AstroWind`,
+  footNote: `© ${new Date().getFullYear()} Emjay · Lore CC-BY · Code MIT · <a class="underline underline-offset-2" href="/rss.xml">RSS</a>`,
 };

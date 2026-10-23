@@ -1,0 +1,89 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'PowerCordKit — Discord mod tools + Unified Mod Inbox',
+  description:
+    'PowerCordKit is an open-source Discord mod suite: static mod tools, a unified community inbox, and quiet moderation tools on Cloudflare Workers + D1. MIT.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement" />
+
+  <section class="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-16">
+    <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase opacity-60">
+      TOOLS // DISCORD MOD SUITE · MIT
+    </p>
+    <h1 class="font-display text-4xl sm:text-5xl mt-3">PowerCordKit</h1>
+    <p class="text-xl text-muted mt-4 leading-relaxed">
+      Every server, every forum. <span class="text-default font-semibold">One inbox.</span>
+      Static mod tools plus a unified mail inbox on Workers + D1.
+    </p>
+
+    <div class="emjay-terminal rounded-2xl mt-8 overflow-hidden text-[#EDE6D3]">
+      <div
+        class="flex items-center justify-between px-5 py-3 border-b border-white/10 font-mono2 text-[11px] tracking-[0.2em] uppercase opacity-70"
+      >
+        <p>
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-red-400/80 mr-1 align-middle"></span><span
+            class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-300/80 mr-2 align-middle"></span> powercordkit — zsh
+        </p>
+        <p>WORKERS + D1 · MIT</p>
+      </div>
+      <div class="font-mono2 p-5 sm:p-6 text-[13px] sm:text-sm leading-relaxed">
+        <p><span class="opacity-50">$</span> git clone https://github.com/EmjayBot/powercordkit.git</p>
+        <p><span class="opacity-50">$</span> npm install && npm run dev <span class="opacity-50">— tools at /, inbox at /mail/</span></p>
+        <p class="opacity-90">clone it, skin it, self-host it — your data stays yours</p>
+        <div class="mt-4 border-t border-white/10">
+          <div class="flex flex-col sm:flex-row sm:justify-between gap-1 py-2.5 border-b border-white/10">
+            <span class="text-[#E8DCC4]">11 static tools</span><span class="opacity-70">embed · color · slowmode · permissions · lockdown · giveaways · automod…</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:justify-between gap-1 py-2.5 border-b border-white/10">
+            <span class="text-[#E8DCC4]">unified mod inbox</span><span class="opacity-70">tickets · threads · ideas · roadmap · Discord login</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:justify-between gap-1 py-2.5 border-b border-white/10">
+            <span class="text-[#E8DCC4]">quiet mod tools</span><span class="opacity-70">ban sync · timeouts · infractions · appeals · notes</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:justify-between gap-1 py-2.5">
+            <span class="text-[#E8DCC4]">forum webhooks</span><span class="opacity-70">Discord · Discourse · NodeBB · Flarum · Lemmy</span>
+          </div>
+        </div>
+        <p class="mt-4">
+          <span class="opacity-50">$</span> live demo <span class="opacity-50">→</span>
+          <a
+            class="text-[#E8DCC4] underline underline-offset-4"
+            href="https://powercordkit.emjay.fyi"
+            target="_blank"
+            rel="noopener">powercordkit.emjay.fyi</a
+          ><span class="animate-pulse">▌</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3 mt-6">
+      <a
+        href="https://powercordkit.emjay.fyi"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-[#F7F3EA] hover:bg-neutral-700 dark:bg-[#E8DCC4] dark:text-neutral-900 dark:hover:bg-white transition"
+      >
+        Open live demo →
+      </a>
+      <a
+        href="https://github.com/EmjayBot/powercordkit"
+        target="_blank"
+        rel="noopener"
+        class="font-mono2 inline-flex items-center gap-2 rounded-full border emjay-rule px-6 py-3 text-sm hover:bg-black/5 dark:hover:bg-white/10 transition"
+      >
+        github / powercordkit
+      </a>
+    </div>
+
+    <p class="font-mono2 mt-8 text-[11px] tracking-[0.2em] uppercase opacity-50">
+      MIT — keep the “Powered by PowerCordKit” credit ·
+      <a href="/worldbuilding" class="underline underline-offset-2">worldbuilding</a> ·
+      <a href="/xcf-sync" class="underline underline-offset-2">xcf-sync</a>
+    </p>
+  </section>
+</Layout>

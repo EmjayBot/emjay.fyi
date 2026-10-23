@@ -3,7 +3,6 @@ import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
-import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 // import PostTags from "~/components/blog/Tags.astro";
 
@@ -36,13 +35,16 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
-    >
-      The Blog
-    </Headline>
-    <BlogList posts={page.data} />
+  <Fragment slot="announcement" />
+  <section class="px-4 sm:px-6 py-12 sm:py-16 mx-auto max-w-4xl">
+    <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase opacity-60">FIELD LOG // ALL ENTRIES</p>
+    <h1 class="font-display text-4xl sm:text-5xl mt-3">The Log</h1>
+    <p class="text-lg text-muted mt-4 leading-relaxed">
+      Field notes on Urth — Free Pax States, Kilumi grammar — plus notes on the pipeline that ships the maps.
+    </p>
+    <div class="mt-8">
+      <BlogList posts={page.data} />
+    </div>
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     <!--
       <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />

@@ -1,0 +1,71 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'XCF Sync — GIMP XCF layers to git',
+  description: 'XCF Sync watches GIMP .xcf files, exports tagged layers as PNGs, and auto-pushes to git. Standalone, MIT.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement" />
+
+  <section class="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-16">
+    <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase opacity-60">TOOLS // STANDALONE · MIT</p>
+    <h1 class="font-display text-4xl sm:text-5xl mt-3">XCF Sync</h1>
+    <p class="text-xl text-muted mt-4 leading-relaxed">
+      GIMP <span class="font-mono2 text-lg">.xcf</span> layers → PNG → git auto-push.
+      Built for large worldbuilding maps.
+    </p>
+
+    <div class="emjay-terminal rounded-2xl mt-8 overflow-hidden text-[#EDE6D3]">
+      <div class="flex items-center justify-between px-5 py-3 border-b border-white/10 font-mono2 text-[11px] tracking-[0.2em] uppercase opacity-70">
+        <p><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-400/80 mr-1 align-middle"></span><span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-300/80 mr-2 align-middle"></span> xcf-sync — zsh</p>
+        <p>PYPI · MIT</p>
+      </div>
+      <div class="font-mono2 p-5 sm:p-6 text-[13px] sm:text-sm leading-relaxed">
+        <p><span class="opacity-50">$</span> pip install xcf-git-sync</p>
+        <p><span class="opacity-50">$</span> xcf-git-sync --xcf maps/source/urth.xcf --repo . --push</p>
+        <p class="opacity-90">layers you tag → PNGs → git, automatically</p>
+        <div class="mt-4 border-t border-white/10">
+          <div class="flex flex-col sm:flex-row sm:justify-between gap-1 py-2.5 border-b border-white/10">
+            <span class="text-[#E8DCC4]">selective export</span><span class="opacity-70">by tag, group, name, or regex</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:justify-between gap-1 py-2.5 border-b border-white/10">
+            <span class="text-[#E8DCC4]">GIMP 2.10 + 3</span><span class="opacity-70">fast parse or headless export</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:justify-between gap-1 py-2.5 border-b border-white/10">
+            <span class="text-[#E8DCC4]">watch + auto-push</span><span class="opacity-70">save in GIMP, layers ship</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:justify-between gap-1 py-2.5">
+            <span class="text-[#E8DCC4]">cloud safety net</span><span class="opacity-70">Actions workflow syncs in CI</span>
+          </div>
+        </div>
+        <p class="mt-4"><span class="opacity-50">$</span> proof it works <span class="opacity-50">→</span> <a class="text-[#E8DCC4] underline underline-offset-4" href="https://atlas.urthmaps.com/" target="_blank" rel="noopener">Urth Atlas</a><span class="opacity-70">, a fully working site built with it — the interactive map of all of Urth</span><span class="animate-pulse">▌</span></p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3 mt-6">
+      <a
+        href="https://atlas.urthmaps.com/"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-[#F7F3EA] hover:bg-neutral-700 dark:bg-[#E8DCC4] dark:text-neutral-900 dark:hover:bg-white transition"
+      >
+        Open Urth Atlas →
+      </a>
+      <a
+        href="https://github.com/EmjayBot/xcf-git-sync"
+        target="_blank"
+        rel="noopener"
+        class="font-mono2 inline-flex items-center gap-2 rounded-full border emjay-rule px-6 py-3 text-sm hover:bg-black/5 dark:hover:bg-white/10 transition"
+      >
+        github / xcf-git-sync
+      </a>
+    </div>
+
+    <p class="font-mono2 mt-8 text-[11px] tracking-[0.2em] uppercase opacity-50">
+      Standalone tool, separate from Urth lore · <a href="/worldbuilding" class="underline underline-offset-2">back to worldbuilding</a> · <a href="/powercordkit" class="underline underline-offset-2">powercordkit</a>
+    </p>
+  </section>
+</Layout>

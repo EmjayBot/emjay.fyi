@@ -10,8 +10,8 @@ site:
 metadata:
   title:
     default: Emjay FYI
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    template: '%s — Emjay FYI'
+  description: 'Emjay — worldbuilding on Urth (Free Pax States, Kilumi conlang), XCF Sync for GIMP-to-git maps, and PowerCordKit Discord mod tools.'
   robots:
     index: true
     follow: true

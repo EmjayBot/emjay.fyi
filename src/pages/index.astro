@@ -1,38 +1,175 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import { findLatestPosts } from '~/utils/blog';
+import { getPermalink } from '~/utils/permalinks';
+import { getFormattedDate } from '~/utils/utils';
 
 const metadata = {
   title: 'Emjay — Worldbuilder & Conlanger',
-  description: 'Portfolio of worldbuilding, Ima.gs, Kainoa Apps, and Anoatech documentation.',
+  description:
+    'Worldbuilding on Urth (Free Pax States, Kilumi conlang), XCF Sync for GIMP-to-git maps, and PowerCordKit Discord mod tools.',
   ignoreTitleTemplate: true,
 };
+
+const latestPosts = await findLatestPosts({ count: 3 });
 ---
 
 <Layout metadata={metadata}>
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Explore Worldbuilding',
-        href: '/worldbuilding',
-        icon: 'tabler:map',
-      },
-      { text: 'Wayfield Labs', href: 'https://wayfield.dev' },
-    ]}
-  >
-    <Fragment slot="title">
-      Worldbuilding on <span class="text-accent dark:text-white highlight">Urth</span> +
-      <br class="hidden md:block" />
-      <span>open-source for everyone else</span>
-    </Fragment>
+  <Fragment slot="announcement" />
 
-    <Fragment slot="subtitle">
-      I'm Emjay — I collaborate on <strong>Urth</strong>, including the <strong>Free Pax States</strong> and <strong
-        >Kilumi</strong
-      > conlang. I also run <strong>Wayfield Labs</strong>: git-native software for communities the tech industry
-      ignores. 20 open-source apps. 4 categories. 1 mission.
-    </Fragment>
-  </Hero>
-  <!-- PORTFOLIO -->
+  <!-- HERO / FIELD HEADER -->
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 pt-12 pb-8 sm:pt-16">
+    <p class="font-mono2 text-[11px] sm:text-xs tracking-[0.2em] uppercase opacity-70">
+      FIELD NOTES FROM URTH
+    </p>
+    <h1 class="font-display text-4xl sm:text-6xl leading-[1.05] mt-4 max-w-3xl">
+      A world of fractured nations,<br />
+      <span class="italic font-medium">living languages, quiet revolutions.</span>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+      I'm Emjay — I'm building the nation of <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://github.com/EmjayBot/free-pax-states" target="_blank" rel="noopener">Free Pax States</a>
+      and the <strong class="text-default">Kilumi</strong> conlang on Urth. I also envisioned
+      <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://github.com/EmjayBot/xcf-git-sync" target="_blank" rel="noopener">XCF Sync</a>, the tool behind
+      <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://atlas.urthmaps.com/" target="_blank" rel="noopener">Urth Atlas</a> — plus
+      <a class="text-default hover:underline underline-offset-4 font-semibold" href="https://github.com/EmjayBot/powercordkit" target="_blank" rel="noopener">PowerCordKit</a>,
+      Discord mod tools + a unified mod inbox.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a
+        href="/worldbuilding"
+        class="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-[#F7F3EA] hover:bg-neutral-700 dark:bg-[#E8DCC4] dark:text-neutral-900 dark:hover:bg-white transition"
+      >
+        <span aria-hidden="true">◈</span> Explore Free Pax States
+      </a>
+      <a
+        href="/xcf-sync"
+        class="font-mono2 inline-flex items-center gap-2 rounded-full border emjay-rule px-6 py-3 text-sm hover:bg-black/5 dark:hover:bg-white/10 transition"
+      >
+        <span class="opacity-60">$</span> xcf-sync --push
+      </a>
+      <a
+        href="/powercordkit"
+        class="font-mono2 inline-flex items-center gap-2 rounded-full border emjay-rule px-6 py-3 text-sm hover:bg-black/5 dark:hover:bg-white/10 transition"
+      >
+        <span class="opacity-60">⌁</span> powercordkit
+      </a>
+    </div>
+    <div class="font-mono2 mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[11px] tracking-widest uppercase opacity-60 border-t emjay-rule pt-4">
+      <span>free pax states</span>
+      <span>lexicon 205 words</span>
+      <span>xcf-git-sync on PyPI</span>
+      <span>powercordkit live</span>
+      <span>urth atlas live</span>
+    </div>
+  </section>
+
+  <!-- SPLIT: ATLAS + TERMINAL -->
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 pb-4 grid gap-4 md:grid-cols-2">
+    <!-- Worldbuilding card -->
+    <a href="/worldbuilding" class="emjay-card group rounded-2xl p-7 sm:p-8 block hover:-translate-y-0.5 transition-transform">
+      <div class="flex items-center justify-between">
+        <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
+          ▚ Worldbuilding — Urth
+        </p>
+        <p class="font-mono2 text-[11px] opacity-50">FPS // 03 FILES</p>
+      </div>
+      <h2 class="font-display text-3xl mt-4">Free Pax States & Kilumi</h2>
+      <p class="mt-3 text-muted leading-relaxed">
+        A loose confederation after the Pax collapse — city-states, trade routes, mutual-defense
+        pacts. Plus <span class="font-mono2 text-sm">kilu-mi</span>
+        <span class="opacity-60 text-sm">[trade.tongue]</span>, the agglutinative trade tongue of the southern archipelagos.
+      </p>
+      <ul class="mt-5 space-y-2 text-sm">
+        <li class="border-t emjay-rule pt-2 flex justify-between gap-4">
+          <span>Council of envoys, no standing army</span><span class="font-mono2 text-xs opacity-50">POL</span>
+        </li>
+        <li class="border-t emjay-rule pt-2 flex justify-between gap-4">
+          <span>SOV · case stacking · evidentiality</span><span class="font-mono2 text-xs opacity-50">KIL</span>
+        </li>
+        <li class="border-t border-b emjay-rule py-2 flex justify-between gap-4">
+          <span>Border towns & treaties — mapping now</span><span class="font-mono2 text-xs opacity-50">MAP</span>
+        </li>
+      </ul>
+      <p class="mt-5 text-sm font-semibold group-hover:underline underline-offset-4">
+        Open the field file →
+      </p>
+    </a>
+
+    <!-- Terminal card -->
+    <a href="/xcf-sync" class="emjay-terminal group rounded-2xl p-7 sm:p-8 block text-[#EDE6D3] hover:-translate-y-0.5 transition-transform">
+      <div class="flex items-center justify-between font-mono2 text-[11px] tracking-[0.2em] uppercase opacity-70">
+        <p><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-400/80 mr-1 align-middle"></span><span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-300/80 mr-2 align-middle"></span> xcf-sync — zsh</p>
+        <p>MIT</p>
+      </div>
+      <h2 class="font-display text-3xl mt-4 text-[#F5EEDC]">XCF Sync</h2>
+      <p class="font-mono2 mt-4 text-[13px] leading-relaxed opacity-80">
+        <span class="opacity-50">$</span> pip install xcf-git-sync<br />
+        <span class="opacity-50">$</span> watch maps/*.xcf --push <span class="opacity-50">— layers ship on save</span>
+      </p>
+      <div class="font-mono2 mt-5 text-[13px] border-t border-white/10">
+        <div class="flex justify-between py-2 border-b border-white/10"><span>tagged layers → PNG</span><span class="text-green-300/90">● auto</span></div>
+        <div class="flex justify-between py-2 border-b border-white/10"><span>GIMP 2.10 + 3</span><span class="text-green-300/90">● supported</span></div>
+        <div class="flex justify-between py-2"><span>proof: Urth Atlas</span><span class="text-green-300/90">● live</span></div>
+      </div>
+      <p class="font-mono2 mt-5 text-sm text-[#E8DCC4] group-hover:underline underline-offset-4">
+        $ open the tool →
+      </p>
+    </a>
+  </section>
+
+  <!-- POWERCORDKIT BANNER -->
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 pb-4">
+    <a href="/powercordkit" class="emjay-card group rounded-2xl p-7 sm:p-8 block hover:-translate-y-0.5 transition-transform">
+      <div class="flex items-center justify-between">
+        <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
+          ⌁ PowerCordKit — Discord mod suite
+        </p>
+        <p class="font-mono2 text-[11px] opacity-50">WORKERS + D1 // MIT</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 md:items-center mt-4">
+        <div>
+          <h2 class="font-display text-3xl">Every server, every forum. One inbox.</h2>
+          <p class="mt-3 text-muted leading-relaxed">
+            11 static mod tools plus a unified inbox — tickets, ideas, roadmap, ban sync, timeouts,
+            appeals — on Cloudflare Workers + D1. Clone it, skin it, self-host it.
+          </p>
+        </div>
+        <ul class="font-mono2 text-[13px] space-y-0 border-t emjay-rule">
+          <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule"><span>tools hub + mail inbox</span><span class="opacity-50">● live</span></li>
+          <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule"><span>ban sync · timeouts · appeals</span><span class="opacity-50">● modtools</span></li>
+          <li class="flex justify-between gap-4 py-2.5"><span>powercordkit.emjay.fyi</span><span class="opacity-50">● demo →</span></li>
+        </ul>
+      </div>
+      <p class="mt-5 text-sm font-semibold group-hover:underline underline-offset-4">
+        Open PowerCordKit →
+      </p>
+    </a>
+  </section>
+
+  <!-- FIELD LOG -->  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between border-b emjay-rule pb-3">
+      <h3 class="font-mono2 text-xs tracking-[0.2em] uppercase opacity-70">Latest from the field</h3>
+      <a href="/blog" class="text-sm font-semibold hover:underline underline-offset-4">All entries →</a>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-4 mt-4">
+      {
+        latestPosts.map((post) => (
+          <a
+            href={getPermalink(post.permalink, 'post')}
+            class="emjay-card rounded-xl p-5 block hover:-translate-y-0.5 transition-transform"
+          >
+            <p class="font-mono2 text-[11px] opacity-50 uppercase tracking-widest">
+              {getFormattedDate(post.publishDate)}
+              {post.category ? ` · ${post.category.title}` : ''}
+            </p>
+            <p class="font-display text-xl mt-2">{post.title}</p>
+            {post.excerpt && <p class="text-sm text-muted mt-2 line-clamp-3">{post.excerpt}</p>}
+          </a>
+        ))
+      }
+    </div>
+    <p class="font-mono2 text-[11px] tracking-widest uppercase opacity-50 mt-8 text-center">
+      Lore CC-BY · Code MIT · No trackers · RSS inside
+    </p>
+  </section>
 </Layout>

@@ -2,42 +2,92 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Worldbuilding — Emjay',
+  title: 'Worldbuilding on Urth',
   description: 'Free Pax States and the Kilumi conlang on Urth.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-4 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6">Worldbuilding</h1>
-    <p class="text-xl text-muted mb-8">
+  <Fragment slot="announcement" />
+
+  <section class="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-16">
+    <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase opacity-60">URTH // FIELD NOTES — FILE 02</p>
+    <h1 class="font-display text-4xl sm:text-5xl mt-3">Worldbuilding</h1>
+    <p class="text-xl text-muted mt-4 leading-relaxed">
       Building Urth — a world of fractured nations, living languages, and quiet revolutions.
     </p>
 
-    <div class="prose prose-lg dark:prose-invert max-w-none">
-      <h2>Free Pax States</h2>
-      <p>
-        A loose confederation born after the Pax collapse. Not a country — a network of city-states, trade routes, and
-        mutual-defense pacts trying to stay free in a world that keeps centralizing.
+    <div class="emjay-card rounded-2xl p-7 sm:p-8 mt-8">
+      <div class="flex items-center justify-between">
+        <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
+          ▚ Free Pax States
+        </p>
+        <p class="font-mono2 text-[11px] opacity-50">STATUS: MAPPING</p>
+      </div>
+      <p class="mt-4 leading-relaxed text-muted">
+        A loose confederation born after the Pax collapse. Not a country — a network of
+        city-states, trade routes, and mutual-defense pacts trying to stay free in a world that
+        keeps centralizing.
       </p>
-      <ul>
-        <li>Political structure: council of envoys, no standing army</li>
-        <li>Culture: maker-first, archive-obsessed, skeptical of empires</li>
-        <li>Current focus: mapping the border towns and their treaties</li>
+      <ul class="mt-5 text-[15px] space-y-0 border-t emjay-rule">
+        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
+          <span><strong>Political structure</strong> — council of envoys, no standing army</span>
+          <span class="font-mono2 text-xs opacity-50 shrink-0">POL</span>
+        </li>
+        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
+          <span><strong>Culture</strong> — maker-first, archive-obsessed, skeptical of empires</span>
+          <span class="font-mono2 text-xs opacity-50 shrink-0">CUL</span>
+        </li>
+        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
+          <span><strong>Current focus</strong> — mapping the border towns and their treaties</span>
+          <span class="font-mono2 text-xs opacity-50 shrink-0">MAP</span>
+        </li>
+        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
+          <span><strong>Showcase portal + Census Office</strong> — live-synced from the census sheet</span>
+          <a class="font-mono2 text-xs opacity-70 shrink-0 hover:underline underline-offset-2" href="https://github.com/EmjayBot/free-pax-states" target="_blank" rel="noopener">GITHUB →</a>
+        </li>
       </ul>
-
-      <h2>Kilumi — Conlang of Urth</h2>
-      <p>
-        Kilumi is the trade tongue of the southern archipelagos. Agglutinative, vowel-harmony, built for clarity over
-        poetry — though it has plenty of both.
-      </p>
-      <ul>
-        <li>Phonology: 5 vowels, 14 consonants, no tones</li>
-        <li>Grammar: SOV, case stacking, evidentiality markers</li>
-        <li>Status: working lexicon ~800 words, grammar sketch in progress</li>
-      </ul>
-
-      <p><em>More maps, lexicon entries, and short fiction coming soon.</em></p>
     </div>
+
+    <div class="emjay-card rounded-2xl p-7 sm:p-8 mt-4">
+      <div class="flex items-center justify-between">
+        <p class="font-mono2 text-[11px] tracking-[0.2em] uppercase" style="color: var(--emjay-stamp)">
+          ◐ Kilumi — Conlang of Urth
+        </p>
+        <p class="font-mono2 text-[11px] opacity-50">LEXICON 205</p>
+      </div>
+      <p class="mt-4 leading-relaxed text-muted">
+        Kilumi is the trade tongue of the southern archipelagos. Agglutinative, vowel-harmony,
+        built for clarity over poetry — though it has plenty of both.
+      </p>
+      <div class="font-mono2 mt-5 rounded-xl border emjay-rule p-4 text-sm leading-relaxed overflow-x-auto">
+        <p><span class="opacity-50">kilu-mi</span> [trade.tongue] <span class="opacity-50">— n.</span> shared trade language</p>
+        <p><span class="opacity-50">pax-suri</span> [pax.breach] <span class="opacity-50">— n.</span> the collapse; lit. "pax-broken"</p>
+        <p><span class="opacity-50">-na / -ti</span> [seen / heard] <span class="opacity-50">— ev.</span> evidentiality suffixes</p>
+      </div>
+      <ul class="mt-5 text-[15px] space-y-0 border-t emjay-rule">
+        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
+          <span><strong>Phonology</strong> — 5 vowels, 14 consonants, no tones</span>
+          <span class="font-mono2 text-xs opacity-50 shrink-0">PHON</span>
+        </li>
+        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
+          <span><strong>Grammar</strong> — SOV, case stacking, evidentiality markers</span>
+          <span class="font-mono2 text-xs opacity-50 shrink-0">GRAM</span>
+        </li>
+        <li class="flex justify-between gap-4 py-2.5 border-b emjay-rule">
+          <span><strong>Status</strong> — working lexicon, grammar sketch in progress</span>
+          <span class="font-mono2 text-xs opacity-50 shrink-0">WIP</span>
+        </li>
+      </ul>
+      <p class="mt-5 text-sm italic opacity-70">More lexicon entries and short fiction coming soon.</p>
+    </div>
+
+    <p class="mt-8 text-sm">
+      <a href="/blog" class="font-semibold hover:underline underline-offset-4">Read the field log →</a>
+      <span class="mx-2 opacity-40">·</span>
+      <a href="/xcf-sync" class="font-mono2 text-sm hover:underline underline-offset-4">$ open xcf-sync</a>
+      <span class="mx-2 opacity-40">·</span>
+      <a href="/powercordkit" class="font-mono2 text-sm hover:underline underline-offset-4">⌁ powercordkit</a>
+    </p>
   </section>
 </Layout>
